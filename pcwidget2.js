@@ -28,7 +28,7 @@ head.appendChild(link);
 
 
 const userAction = async () => {
-    const response = await fetch('https://consumer-dev.pricingculture.com/api/assets/quick_search?columns=id,name,asset_url,platform,platform_asset_id,asset_type,security_type,security_sub_type,asset_status,media&page_size=10&platform_id=in:2', {
+    const response = await fetch('https://consumer-dev.pricingculture.com/api/assets/quick_search?columns=id,name,asset_url,platform,platform_asset_id,asset_type,security_type,security_sub_type,asset_status,media&page_size=10&platform_id=in:6', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -42,12 +42,12 @@ const userAction = async () => {
 
     let assetdiv=`<div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" style="height:500px;">`     
+            <div class="carousel-inner" style="height:500px;text-align:center;width:100%;">`     
     for(let i=0;i<jsondata.length;i++){
         let divdata=''
-        if(i==0) divdata=`<div class="item active" style="height:100%;">`
+        if(i==0) divdata=`<div class="item active" style="height:100%;width:100%;">`
         else divdata=`<div class="item" style="height:100%;">`
-        divdata+=`<img src=${jsondata[i].media[1].media_src} alt="No Image" style="height:100%;">
+        divdata+=`<img src=${jsondata[i].media[1].media_src} alt="No Image" style="height:100%;width:100%;object-fit:contain;">
                 <div class="carousel-caption">
                     <h3>${jsondata[i].name}</h3>
                     <p>${jsondata[i].platform.name}</p>
