@@ -15,8 +15,8 @@ let head  = document.getElementsByTagName('head')[0];
 let link  = document.createElement('link');
 link.rel  = 'stylesheet';
 link.type = 'text/css';
-//link.href = 'pcwidget.css';
-link.href = 'https://cdn.jsdelivr.net/gh/Mahendramahii/pcwidget/pcwidget.css'
+//link.href = 'pcwidget2.css';
+link.href = 'https://cdn.jsdelivr.net/gh/Mahendramahii/pcwidget/pcwidget2.css'
 link.media = 'all';
 head.appendChild(link);
 
