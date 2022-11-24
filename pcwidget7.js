@@ -5,7 +5,6 @@ window.onload = function() {
     // document.head.appendChild(bslink);
     userAction();
 };
-
 let slideIndex = 0;
 let interval
 
@@ -40,7 +39,7 @@ const userAction = async () => {
     let assetdiv=`<div class="slideshow-container" style="height:100%">
                     <div style="font-size:20px;text-align:center;">Header</div>`     
     for(let i=0;i<jsondata.length;i++){
-        divdata=`<div class="mySlides fade" id="slide${i+1}" style="text-align:center;">
+    let divdata=`<div class="mySlides fade" id="slide${i+1}" style="text-align:center;">
                 <div>${i+1}/${jsondata.length}</div>
                 <div style="height:200px;">
                     <img src=${jsondata[i].media[1].media_src} alt="No Image" style="height:100%;width:100%;object-fit:contain;">

@@ -23,9 +23,9 @@ head.appendChild(link);
 
 
 const userAction = async () => {
-    let pid = document.getElementsByClassName('pcscript')[0].attributes.pid.value;
-    console.log('pid',pid)
-    const response = await fetch('https://consumer-dev.pricingculture.com/api/assets/quick_search?columns=id,name,asset_url,platform,platform_asset_id,asset_type,security_type,security_sub_type,asset_status,media&page_size=10&platform_id=in:'+pid, {
+    // let pid = document.getElementsByClassName('pcscript')[0].attributes.pid.value;
+    // console.log('pid',pid)
+    const response = await fetch('https://consumer-dev.pricingculture.com/api/assets/quick_search?columns=id,name,asset_url,platform,platform_asset_id,asset_type,security_type,security_sub_type,asset_status,media&page_size=10&platform_id=in:6', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
