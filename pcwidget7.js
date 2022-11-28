@@ -9,7 +9,8 @@ let slideIndex = 0;
 let interval
 
 let doc=document.querySelector('.pcwidget')
-
+//let doc2=document.querySelector('.pcwidget2')
+//console.log('doc2',doc2)
 
 let head  = document.getElementsByTagName('head')[0];
 let link  = document.createElement('link');
@@ -59,6 +60,7 @@ const userAction = async () => {
         <img src="https://uploads-ssl.webflow.com/6075c46185f1280c00292db7/6123c611051bfe023c5b7dd0_Asset%202.png" loading="lazy" alt="no logo" style="height:20px;">
     </div>`
     doc.innerHTML=assetdiv
+    //doc2.innerHTML=assetdiv
     autoSlides()
     interval= setInterval(autoSlides, 2000)
 }
